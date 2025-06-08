@@ -2,7 +2,9 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY . .
+RUN apt-get update && apt-get install -y git
+
+RUN git clone https://github.com/teched-si-official/Lavalinkfork .
 
 RUN ./gradlew build --no-daemon
 

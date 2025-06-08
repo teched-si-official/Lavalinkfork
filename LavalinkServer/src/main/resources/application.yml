@@ -6,9 +6,23 @@ spring:
   cloud:
     config:
       enabled: false
+
 server:
   error:
     include-message: ALWAYS
     include-binding-errors: ALWAYS
     include-stacktrace: ON_PARAM
     include-exception: false
+  port: 2333  # ✅ This sets the Lavalink server port
+
+lavalink:
+  server:
+    password: "youshallpass"  # ✅ Set your Lavalink password here
+    sources:
+      youtube: true
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false

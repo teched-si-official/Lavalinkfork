@@ -6,4 +6,4 @@ COPY . .
 
 RUN ./gradlew build --no-daemon
 
-CMD ["java", "-jar", "Lavalink.jar"]
+CMD ["java", "-jar", "LavalinkServer/build/libs/Lavalink.jar"]
